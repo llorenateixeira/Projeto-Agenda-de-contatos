@@ -1,0 +1,7 @@
+digamos que tu queira adicionar um novo arquivo, como esse
+criei o arquivo, venho no TERMINAL GIT BASH
+e faco
+
+
+
+agora eu qquero alterar o arquivo asi
