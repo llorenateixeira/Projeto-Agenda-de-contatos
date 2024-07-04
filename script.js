@@ -6,32 +6,26 @@ document.getElementById('tableSearchInput').addEventListener('keypress', functio
 });
 
 function searchTable() {
-    var input, filter, table, tr, td, i, j, txtValue, firstMatch;
+    var input, filter, table, tr, td, i, j, txtValue;
     input = document.getElementById("tableSearchInput");
     filter = input.value.toLowerCase();
     table = document.getElementById("contactTable");
     tr = table.getElementsByTagName("tr");
-    firstMatch = null;
 
     for (i = 0; i < tr.length; i++) {
-        tr[i].classList.remove("highlight");  // Remove previous highlights
+        tr[i].style.display = "none";  // Hide all rows initially
         td = tr[i].getElementsByTagName("td");
         for (j = 0; j < td.length; j++) {
             if (td[j]) {
                 txtValue = td[j].textContent || td[j].innerText;
-                if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                    tr[i].classList.add("highlight");  // Highlight matching row
-                    if (!firstMatch) {
-                        firstMatch = tr[i];
-                    }
+                if (txtValue.toLowerCase() === filter) {
+                    tr[i].style.display = "";  // Show the row if an exact match is found
+                    tr[i].classList.add("highlight");  // Highlight the matching row
                     break;  // Stop checking other cells in this row
+                } else {
+                    tr[i].classList.remove("highlight");  // Remove highlight if no match
                 }
             }
         }
-    }
-
-    // Scroll to the first match
-    if (firstMatch) {
-        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 }
