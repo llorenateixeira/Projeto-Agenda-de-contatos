@@ -28,4 +28,18 @@ function searchTable() {
             }
         }
     }
+
+    // Set a timer to reset the table after 2 minutes (120000 milliseconds)
+    setTimeout(resetTable, 120000);
+}
+
+function resetTable() {
+    var table, tr, i;
+    table = document.getElementById("contactTable");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 0; i < tr.length; i++) {
+        tr[i].style.display = "";  // Show all rows
+        tr[i].classList.remove("highlight");  // Remove highlight
+    }
 }
