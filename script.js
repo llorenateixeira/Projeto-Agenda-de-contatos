@@ -6,7 +6,7 @@ document.getElementById('tableSearchInput').addEventListener('keypress', functio
 });
 
 function searchTable() {
-    var input, filter, table, tr, td, i, j, txtValue;
+    var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("tableSearchInput");
     filter = input.value.toLowerCase();
     table = document.getElementById("contactTable");
@@ -14,17 +14,11 @@ function searchTable() {
 
     for (i = 0; i < tr.length; i++) {
         tr[i].style.display = "none";  // Hide all rows initially
-        td = tr[i].getElementsByTagName("td");
-        for (j = 0; j < td.length; j++) {
-            if (td[j]) {
-                txtValue = td[j].textContent || td[j].innerText;
-                if (txtValue.toLowerCase() === filter) {
-                    tr[i].style.display = "";  // Show the row if an exact match is found
-                    tr[i].classList.add("highlight");  // Highlight the matching row
-                    break;  // Stop checking other cells in this row
-                } else {
-                    tr[i].classList.remove("highlight");  // Remove highlight if no match
-                }
+        td = tr[i].getElementsByTagName("td")[2];  // Get the "Nome" column (index 2)
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";  // Show the row if a match is found in the "Nome" column
             }
         }
     }
@@ -40,6 +34,5 @@ function resetTable() {
 
     for (i = 0; i < tr.length; i++) {
         tr[i].style.display = "";  // Show all rows
-        tr[i].classList.remove("highlight");  // Remove highlight
     }
 }
