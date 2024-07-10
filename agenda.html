@@ -1,645 +1,608 @@
-<!DOCTYPE html>
-<html lang="pt-br"> 
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>Agenda de Contatos</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body> 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="./logo_black.png" alt="Logo" class="d-inline-block align-text-top">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <form class="d-flex" role="search" onsubmit="return false;">
-                    <input id="tableSearchInput" class="form-control me-2" type="search" placeholder="Buscar por nome" aria-label="Search">
-                    <button type="button" class="btn btn-danger" onclick="searchTable()">Buscar</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-     
-    <div class="container mt-3">    
-    <table class="table table-striped">
-        <thead>
-        <th>Filial</th>
-        <th>Setor</th>
-        <th>Nome</th>
-        <th>Telefone</th> 
-        <th>WhatsApp Link</th>
-      </tr>
-    </thead>
-    <tbody id="contactTable">
-        <tr>
-            <td>SLZ</td>
-            <td>Atendimento</td>
-            <td>Emanuella Nunes</td>
-            <td>98982320002</td>
-            <td><a href="https://wa.me/5598982320002">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Atendimento</td>
-            <td>Ivanilce Cantanhede</td>
-            <td>98982320003</td>
-            <td><a href="https://wa.me/5598982320003">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico Residente</td>
-            <td>EQT.PA - Tedson Baars Pereira</td>
-            <td>91998262195</td>
-            <td><a href="https://wa.me/5591998262195">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Logística</td>
-            <td>Nathanya Nascimento</td>
-            <td>98983410003</td>
-            <td><a href="https://wa.me/5598983410003">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Financeiro</td>
-            <td>Robson Diniz</td>
-            <td>98983410009</td>
-            <td><a href="https://wa.me/5598983410009">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico</td>
-            <td>Roniery Cardoso</td>
-            <td>98983410000</td>
-            <td><a href="https://wa.me/5598983410000">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Comercial</td>
-            <td>Werberth Rocha</td>
-            <td>98982320001</td>
-            <td><a href="https://wa.me/5598982320001">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Logística</td>
-            <td>Ueris De Jesus Costa</td>
-            <td>98982320004</td>
-            <td><a href="https://wa.me/5598982320004">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Técnico Residente</td>
-            <td>BNB - Julio Cesar Dos Santos Araujo</td>
-            <td>85997920111</td>
-            <td><a href="https://wa.me/5585997920111">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Atendimento</td>
-            <td>Maria Jennifer Rodrigues Martins</td>
-            <td>88996280145</td>
-            <td><a href="https://wa.me/5588996280145">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Técnico</td>
-            <td>Victor Gabriel</td>
-            <td>98982252144</td>
-            <td><a href="https://wa.me/5598982252144">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>TI</td>
-            <td>Adryano Perdigao</td>
-            <td>98981580002</td>
-            <td><a href="https://wa.me/5598981580002">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico</td>
-            <td>Cicero Alexandro</td>
-            <td>nan</td>
-            <td><a href="https://wa.me/55nan">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>TI</td>
-            <td>Cristiano Furtado</td>
-            <td>98991354512</td>
-            <td><a href="https://wa.me/5598991354512">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Comercial</td>
-            <td>Dayanna Costa Pinto</td>
-            <td>98983410006</td>
-            <td><a href="https://wa.me/5598983410006">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>TI</td>
-            <td>Ana Luiza Silva</td>
-            <td>85998010779</td>
-            <td><a href="https://wa.me/5585998010779">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Atendimento</td>
-            <td>Ana Rebeca Roza</td>
-            <td>85998010277</td>
-            <td><a href="https://wa.me/5585998010277">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>nan</td>
-            <td>nan</td>
-            <td>nan</td>
-            <td>nan</td>
-            <td><a href="https://wa.me/55nan">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Logística</td>
-            <td>Heitor Costa</td>
-            <td>85981254137</td>
-            <td><a href="https://wa.me/5585981254137">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Logística</td>
-            <td>Willian Ribeiro</td>
-            <td>98981770002</td>
-            <td><a href="https://wa.me/5598981770002">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Atendimento</td>
-            <td>Vitória Menezes</td>
-            <td>85997981105</td>
-            <td><a href="https://wa.me/5585997981105">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Técnico</td>
-            <td>Allyce Pereira Coelho</td>
-            <td>85981579749</td>
-            <td><a href="https://wa.me/5585981579749">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Atendimento</td>
-            <td>Bianca Ferreira</td>
-            <td>85982168304</td>
-            <td><a href="https://wa.me/5585982168304">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Logística</td>
-            <td>Bruno Vicente</td>
-            <td>85981555896</td>
-            <td><a href="https://wa.me/5585981555896">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Técnico</td>
-            <td>Dhayron Souza</td>
-            <td>85981527844</td>
-            <td><a href="https://wa.me/5585981527844">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Logística</td>
-            <td>Adrielle Menezes</td>
-            <td>85997980293</td>
-            <td><a href="https://wa.me/5585997980293">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Técnico</td>
-            <td>Francisco Alberto</td>
-            <td>88996280235</td>
-            <td><a href="https://wa.me/5588996280235">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Técnico</td>
-            <td>Francisco Glauber</td>
-            <td>85997980954</td>
-            <td><a href="https://wa.me/5585997980954">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Compras</td>
-            <td>George Carvalho</td>
-            <td>85998036406</td>
-            <td><a href="https://wa.me/5585998036406">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Logística</td>
-            <td>Graziele Silva</td>
-            <td>85981493096</td>
-            <td><a href="https://wa.me/5585981493096">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Técnico</td>
-            <td>Helio Antonio Alves</td>
-            <td>85981638960</td>
-            <td><a href="https://wa.me/5585981638960">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Atendimento</td>
-            <td>Inara Brenda</td>
-            <td>85996003269</td>
-            <td><a href="https://wa.me/5585996003269">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Técnico</td>
-            <td>Jose Vitor Alves</td>
-            <td>98981240358</td>
-            <td><a href="https://wa.me/5598981240358">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>TI</td>
-            <td>Laryssa Albuquerque</td>
-            <td>98992337617</td>
-            <td><a href="https://wa.me/5598992337617">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>TI</td>
-            <td>Leonardo Pinho</td>
-            <td>85999771501</td>
-            <td><a href="https://wa.me/5585999771501">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Atendimento</td>
-            <td>Nicolas Matias Da Silva</td>
-            <td>98981240458</td>
-            <td><a href="https://wa.me/5598981240458">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Logística</td>
-            <td>Luiz Ricardo Lima</td>
-            <td>85981319902</td>
-            <td><a href="https://wa.me/5585981319902">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Logística</td>
-            <td>Edson Colares</td>
-            <td>85981934093</td>
-            <td><a href="https://wa.me/5585981934093">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Técnico</td>
-            <td>Manuel Valdemir</td>
-            <td>85981840704</td>
-            <td><a href="https://wa.me/5585981840704">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Comercial</td>
-            <td>Nathalia Freitas</td>
-            <td>85982036241</td>
-            <td><a href="https://wa.me/5585982036241">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Logística</td>
-            <td>Ricardo Henrique</td>
-            <td>83999020178</td>
-            <td><a href="https://wa.me/5583999020178">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Atendimento</td>
-            <td>Emilaine Damasceno</td>
-            <td>85981220414</td>
-            <td><a href="https://wa.me/5585981220414">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>Diretoria</td>
-            <td>Cassio Henrique</td>
-            <td>85997981121</td>
-            <td><a href="https://wa.me/5585997981121">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Atendimento</td>
-            <td>Adriana Santiago</td>
-            <td>98991596731</td>
-            <td><a href="https://wa.me/5598991596731">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico Residente </td>
-            <td>EQT.MA - Allan Tavernard</td>
-            <td>98991945051</td>
-            <td><a href="https://wa.me/5598991945051">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Logística</td>
-            <td>Carlos Januario</td>
-            <td>98982251414</td>
-            <td><a href="https://wa.me/5598982251414">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico Residente </td>
-            <td>EQT.PA - Cristian Merces</td>
-            <td>91998261305</td>
-            <td><a href="https://wa.me/5591998261305">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico Residente </td>
-            <td>EQT.RS - Daniel Rodrigo Oliveira</td>
-            <td>51982450068</td>
-            <td><a href="https://wa.me/5551982450068">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Atendimento</td>
-            <td>Dayane Duarte</td>
-            <td>98982870096</td>
-            <td><a href="https://wa.me/5598982870096">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico Residente </td>
-            <td>EQT.GO - Hely Alves Santos</td>
-            <td>62999008928</td>
-            <td><a href="https://wa.me/5562999008928">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico Residente </td>
-            <td>EQT.PI - Hudson Rangel</td>
-            <td>86998592159</td>
-            <td><a href="https://wa.me/5586998592159">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico Residente </td>
-            <td>EQT.AL - Ivaldo Oliveira</td>
-            <td>82996832064</td>
-            <td><a href="https://wa.me/5582996832064">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Fiscal/Financeiro</td>
-            <td>Tania Ilcelene</td>
-            <td>98982870109</td>
-            <td><a href="https://wa.me/5598982870109">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Comercial</td>
-            <td>Jonatas Moreno</td>
-            <td>98991773163</td>
-            <td><a href="https://wa.me/5598991773163">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Logística</td>
-            <td>Leandro Reinaldo</td>
-            <td>98981240323</td>
-            <td><a href="https://wa.me/5598981240323">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico</td>
-            <td>Pedro Washington</td>
-            <td>98991816963</td>
-            <td><a href="https://wa.me/5598991816963">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico</td>
-            <td>Ranielisson Castro</td>
-            <td>98991893953</td>
-            <td><a href="https://wa.me/5598991893953">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico</td>
-            <td>Ronald Gama</td>
-            <td>98981240423</td>
-            <td><a href="https://wa.me/5598981240423">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Logística</td>
-            <td>Ronildo Souza</td>
-            <td>98991781416</td>
-            <td><a href="https://wa.me/5598991781416">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Técnico</td>
-            <td>Ronny Gama</td>
-            <td>98991782693</td>
-            <td><a href="https://wa.me/5598991782693">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Administrativo</td>
-            <td>Susete Souza</td>
-            <td>98992091828</td>
-            <td><a href="https://wa.me/5598992091828">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Financeiro</td>
-            <td>Tarcisia Abreu</td>
-            <td>98991882179</td>
-            <td><a href="https://wa.me/5598991882179">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Logística</td>
-            <td>Hivio Cardoso</td>
-            <td>98991704390</td>
-            <td><a href="https://wa.me/5598991704390">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Diretoria</td>
-            <td>Rubya Souza</td>
-            <td>98991935851</td>
-            <td><a href="https://wa.me/5598991935851">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Diretoria</td>
-            <td>Rubya Souza</td>
-            <td>85982342903</td>
-            <td><a href="https://wa.me/5585982342903">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>SLZ</td>
-            <td>Diretoria</td>
-            <td>Werberth Rocha</td>
-            <td>98991007092</td>
-            <td><a href="https://wa.me/5598991007092">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>CAPGV</td>
-            <td>Modem 4G</td>
-            <td>98982120039</td>
-            <td><a href="https://wa.me/5598982120039">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>CAPGV</td>
-            <td>Modem 4G</td>
-            <td>85981091287</td>
-            <td><a href="https://wa.me/5585981091287">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>FOR</td>
-            <td>CAPGV</td>
-            <td>Modem 4G</td>
-            <td>85982303958</td>
-            <td><a href="https://wa.me/5585982303958">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>nan</td>
-            <td>nan</td>
-            <td>nan</td>
-            <td>nan</td>
-            <td><a href="https://wa.me/55nan">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>nan</td>
-            <td>nan</td>
-            <td>nan</td>
-            <td>98992037453</td>
-            <td><a href="https://wa.me/5598992037453">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>nan</td>
-            <td>nan</td>
-            <td>nan</td>
-            <td>98992249832</td>
-            <td><a href="https://wa.me/5598992249832">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>slz</td>
-            <td>ti</td>
-            <td>lorena</td>
-            <td>98992249832</td>
-            <td><a href="https://wa.me/5598992249832">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>slz</td>
-            <td>ti</td>
-            <td>jordan</td>
-            <td>99982280015</td>
-            <td><a href="https://wa.me/5599982280015">WhatsApp</a></td>
-        </tr>
-        
-        <tr>
-            <td>70</td>
-            <td>nan</td>
-            <td>nan</td>
-            <td>71</td>
-            <td><a href="https://wa.me/5571">WhatsApp</a></td>
-        </tr>
-    </tbody>
-</table>
-</div>
 
-<script src="script.js"></script>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="pt-br"> 
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <title>Agenda de Contatos</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./logo_black.png" alt="Logo" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <form class="d-flex" role="search" onsubmit="return false;">
+                        <input id="tableSearchInput" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button type="button" class="btn btn-danger" onclick="searchTable()">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-3">    
+            <table class="table table-striped" id="contactTable">
+                <thead>
+                    <tr>
+                        <th>Filial</th>
+                        <th>Setor</th>
+                        <th>Nome</th>
+                        <th>Telefone</th> 
+                        <th>WhatsApp Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                <tr>
+                    <td>SLZ</td>
+                    <td>Atendimento</td>
+                    <td>Emanuella Nunes</td>
+                    <td>(98) 98232-0002</td>
+                    <td><a href="https://wa.me/5598982320002">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Atendimento</td>
+                    <td>Ivanilce Cantanhede</td>
+                    <td>(98) 98232-0003</td>
+                    <td><a href="https://wa.me/5598982320003">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico Residente</td>
+                    <td>EQT.PA - Tedson Baars Pereira</td>
+                    <td>(91) 99826-2195</td>
+                    <td><a href="https://wa.me/5591998262195">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Logística</td>
+                    <td>Nathanya Nascimento</td>
+                    <td>(98) 98341-0003</td>
+                    <td><a href="https://wa.me/5598983410003">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Financeiro</td>
+                    <td>Robson Diniz</td>
+                    <td>(98) 98341-0009</td>
+                    <td><a href="https://wa.me/5598983410009">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico</td>
+                    <td>Roniery Cardoso</td>
+                    <td>(98) 98341-0000</td>
+                    <td><a href="https://wa.me/5598983410000">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Comercial</td>
+                    <td>Werberth Rocha</td>
+                    <td>(98) 98232-0001</td>
+                    <td><a href="https://wa.me/5598982320001">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Logística</td>
+                    <td>Ueris De Jesus Costa</td>
+                    <td>(98) 98232-0004</td>
+                    <td><a href="https://wa.me/5598982320004">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Técnico Residente</td>
+                    <td>BNB - Julio Cesar Dos Santos Araujo</td>
+                    <td>(85) 99792-0111</td>
+                    <td><a href="https://wa.me/5585997920111">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Atendimento</td>
+                    <td>Maria Jennifer Rodrigues Martins</td>
+                    <td>(88) 99628-0145</td>
+                    <td><a href="https://wa.me/5588996280145">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Técnico</td>
+                    <td>Victor Gabriel</td>
+                    <td>(98) 98225-2144</td>
+                    <td><a href="https://wa.me/5598982252144">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>TI</td>
+                    <td>Adryano Perdigao</td>
+                    <td>(98) 98158-0002</td>
+                    <td><a href="https://wa.me/5598981580002">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico</td>
+                    <td>Cicero Alexandro</td>
+                    <td>nan</td>
+                    <td><a href="#">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>TI</td>
+                    <td>Cristiano Furtado</td>
+                    <td>(98) 99135-4512</td>
+                    <td><a href="https://wa.me/5598991354512">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Comercial</td>
+                    <td>Dayanna Costa Pinto</td>
+                    <td>(98) 98341-0006</td>
+                    <td><a href="https://wa.me/5598983410006">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>TI</td>
+                    <td>Ana Luiza Silva</td>
+                    <td>(85) 99801-0779</td>
+                    <td><a href="https://wa.me/5585998010779">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Atendimento</td>
+                    <td>Ana Rebeca Roza</td>
+                    <td>(85) 99801-0277</td>
+                    <td><a href="https://wa.me/5585998010277">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>nan</td>
+                    <td>nan</td>
+                    <td>oii</td>
+                    <td>nan</td>
+                    <td><a href="#">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Logística</td>
+                    <td>Heitor Costa</td>
+                    <td>(85) 98125-4137</td>
+                    <td><a href="https://wa.me/5585981254137">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Logística</td>
+                    <td>Willian Ribeiro</td>
+                    <td>(98) 98177-0002</td>
+                    <td><a href="https://wa.me/5598981770002">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Atendimento</td>
+                    <td>Vitória Menezes</td>
+                    <td>(85) 99798-1105</td>
+                    <td><a href="https://wa.me/5585997981105">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Técnico</td>
+                    <td>Allyce Pereira Coelho</td>
+                    <td>(85) 98157-9749</td>
+                    <td><a href="https://wa.me/5585981579749">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Atendimento</td>
+                    <td>Bianca Ferreira</td>
+                    <td>(85) 98216-8304</td>
+                    <td><a href="https://wa.me/5585982168304">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Logística</td>
+                    <td>Bruno Vicente</td>
+                    <td>(85) 98155-5896</td>
+                    <td><a href="https://wa.me/5585981555896">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Técnico</td>
+                    <td>Dhayron Souza</td>
+                    <td>(85) 98152-7844</td>
+                    <td><a href="https://wa.me/5585981527844">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Logística</td>
+                    <td>Adrielle Menezes</td>
+                    <td>(85) 99798-0293</td>
+                    <td><a href="https://wa.me/5585997980293">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Técnico</td>
+                    <td>Francisco Alberto</td>
+                    <td>(88) 99628-0235</td>
+                    <td><a href="https://wa.me/5588996280235">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Técnico</td>
+                    <td>Francisco Glauber</td>
+                    <td>(85) 99798-0954</td>
+                    <td><a href="https://wa.me/5585997980954">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Compras</td>
+                    <td>George Carvalho</td>
+                    <td>(85) 99803-6406</td>
+                    <td><a href="https://wa.me/5585998036406">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Logística</td>
+                    <td>Graziele Silva</td>
+                    <td>(85) 98149-3096</td>
+                    <td><a href="https://wa.me/5585981493096">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Técnico</td>
+                    <td>Helio Antonio Alves</td>
+                    <td>(85) 98163-8960</td>
+                    <td><a href="https://wa.me/5585981638960">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Atendimento</td>
+                    <td>Inara Brenda</td>
+                    <td>(85) 99600-3269</td>
+                    <td><a href="https://wa.me/5585996003269">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Técnico</td>
+                    <td>Jose Vitor Alves</td>
+                    <td>(98) 98124-0358</td>
+                    <td><a href="https://wa.me/5598981240358">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>TI</td>
+                    <td>Laryssa Albuquerque</td>
+                    <td>(98) 99233-7617</td>
+                    <td><a href="https://wa.me/5598992337617">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>TI</td>
+                    <td>Leonardo Pinho</td>
+                    <td>(85) 99977-1501</td>
+                    <td><a href="https://wa.me/5585999771501">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Atendimento</td>
+                    <td>Nicolas Matias Da Silva</td>
+                    <td>(98) 98124-0458</td>
+                    <td><a href="https://wa.me/5598981240458">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Logística</td>
+                    <td>Luiz Ricardo Lima</td>
+                    <td>(85) 98131-9902</td>
+                    <td><a href="https://wa.me/5585981319902">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Logística</td>
+                    <td>Edson Colares</td>
+                    <td>(85) 98193-4093</td>
+                    <td><a href="https://wa.me/5585981934093">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Técnico</td>
+                    <td>Manuel Valdemir</td>
+                    <td>(85) 98184-0704</td>
+                    <td><a href="https://wa.me/5585981840704">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Comercial</td>
+                    <td>Nathalia Freitas</td>
+                    <td>(85) 98203-6241</td>
+                    <td><a href="https://wa.me/5585982036241">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Logística</td>
+                    <td>Ricardo Henrique</td>
+                    <td>(83) 99902-0178</td>
+                    <td><a href="https://wa.me/5583999020178">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Atendimento</td>
+                    <td>Emilaine Damasceno</td>
+                    <td>(85) 98122-0414</td>
+                    <td><a href="https://wa.me/5585981220414">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>Diretoria</td>
+                    <td>Cassio Henrique</td>
+                    <td>(85) 99798-1121</td>
+                    <td><a href="https://wa.me/5585997981121">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Atendimento</td>
+                    <td>Adriana Santiago</td>
+                    <td>(98) 99159-6731</td>
+                    <td><a href="https://wa.me/5598991596731">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico Residente </td>
+                    <td>EQT.MA - Allan Tavernard</td>
+                    <td>(98) 99194-5051</td>
+                    <td><a href="https://wa.me/5598991945051">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Logística</td>
+                    <td>Carlos Januario</td>
+                    <td>(98) 98225-1414</td>
+                    <td><a href="https://wa.me/5598982251414">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico Residente </td>
+                    <td>EQT.PA - Cristian Merces</td>
+                    <td>(91) 99826-1305</td>
+                    <td><a href="https://wa.me/5591998261305">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico Residente </td>
+                    <td>EQT.RS - Daniel Rodrigo Oliveira</td>
+                    <td>(51) 98245-0068</td>
+                    <td><a href="https://wa.me/5551982450068">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Atendimento</td>
+                    <td>Dayane Duarte</td>
+                    <td>(98) 98287-0096</td>
+                    <td><a href="https://wa.me/5598982870096">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico Residente </td>
+                    <td>EQT.GO - Hely Alves Santos</td>
+                    <td>(62) 99900-8928</td>
+                    <td><a href="https://wa.me/5562999008928">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico Residente </td>
+                    <td>EQT.PI - Hudson Rangel</td>
+                    <td>(86) 99859-2159</td>
+                    <td><a href="https://wa.me/5586998592159">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico Residente </td>
+                    <td>EQT.AL - Ivaldo Oliveira</td>
+                    <td>(82) 99683-2064</td>
+                    <td><a href="https://wa.me/5582996832064">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Fiscal/Financeiro</td>
+                    <td>Tania Ilcelene</td>
+                    <td>(98) 98287-0109</td>
+                    <td><a href="https://wa.me/5598982870109">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Comercial</td>
+                    <td>Jonatas Moreno</td>
+                    <td>(98) 99177-3163</td>
+                    <td><a href="https://wa.me/5598991773163">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Logística</td>
+                    <td>Leandro Reinaldo</td>
+                    <td>(98) 98124-0323</td>
+                    <td><a href="https://wa.me/5598981240323">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico</td>
+                    <td>Pedro Washington</td>
+                    <td>(98) 99181-6963</td>
+                    <td><a href="https://wa.me/5598991816963">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico</td>
+                    <td>Ranielisson Castro</td>
+                    <td>(98) 99189-3953</td>
+                    <td><a href="https://wa.me/5598991893953">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico</td>
+                    <td>Ronald Gama</td>
+                    <td>(98) 98124-0423</td>
+                    <td><a href="https://wa.me/5598981240423">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Logística</td>
+                    <td>Ronildo Souza</td>
+                    <td>(98) 99178-1416</td>
+                    <td><a href="https://wa.me/5598991781416">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Técnico</td>
+                    <td>Ronny Gama</td>
+                    <td>(98) 99178-2693</td>
+                    <td><a href="https://wa.me/5598991782693">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Administrativo</td>
+                    <td>Susete Souza</td>
+                    <td>(98) 99209-1828</td>
+                    <td><a href="https://wa.me/5598992091828">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Financeiro</td>
+                    <td>Tarcisia Abreu</td>
+                    <td>(98) 99188-2179</td>
+                    <td><a href="https://wa.me/5598991882179">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Logística</td>
+                    <td>Hivio Cardoso</td>
+                    <td>(98) 99170-4390</td>
+                    <td><a href="https://wa.me/5598991704390">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Diretoria</td>
+                    <td>Rubya Souza</td>
+                    <td>(98) 99193-5851</td>
+                    <td><a href="https://wa.me/5598991935851">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Diretoria</td>
+                    <td>Rubya Souza</td>
+                    <td>(85) 98234-2903</td>
+                    <td><a href="https://wa.me/5585982342903">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>SLZ</td>
+                    <td>Diretoria</td>
+                    <td>Werberth Rocha</td>
+                    <td>(98) 99100-7092</td>
+                    <td><a href="https://wa.me/5598991007092">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>CAPGV</td>
+                    <td>Modem 4g</td>
+                    <td>(98) 98212-0039</td>
+                    <td><a href="https://wa.me/5598982120039">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>CAPGV</td>
+                    <td>Modem 4G</td>
+                    <td>(85) 98109-1287</td>
+                    <td><a href="https://wa.me/5585981091287">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>FOR</td>
+                    <td>CAPGV</td>
+                    <td>Modem 4G</td>
+                    <td>(85) 98230-3958</td>
+                    <td><a href="https://wa.me/5585982303958">WhatsApp</a></td>
+                </tr>
+        
+                <tr>
+                    <td>68</td>
+                    <td>nan</td>
+                    <td>nan</td>
+                    <td>67</td>
+                    <td><a href="https://wa.me/5567">WhatsApp</a></td>
+                </tr>
+        
+                </tbody>
+            </table>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
     

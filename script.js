@@ -1,7 +1,13 @@
 document.getElementById('tableSearchInput').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         searchTable();
-        e.preventDefault(); // Prevent form submission
+        e.preventDefault(); // Prevenir o envio do formulário
+    }
+});
+
+document.getElementById('tableSearchInput').addEventListener('input', function () {
+    if (this.value === '') {
+        resetTable(); // Resetar a tabela se o campo de pesquisa estiver vazio
     }
 });
 
@@ -13,17 +19,17 @@ function searchTable() {
     tr = table.getElementsByTagName("tr");
 
     for (i = 0; i < tr.length; i++) {
-        tr[i].style.display = "none";  // Hide all rows initially
-        td = tr[i].getElementsByTagName("td")[2];  // Get the "Nome" column (index 2)
+        tr[i].style.display = "none";  // Esconder todas as linhas inicialmente
+        td = tr[i].getElementsByTagName("td")[2];  // Obter a coluna "Nome" (índice 2)
         if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";  // Show the row if a match is found in the "Nome" column
+                tr[i].style.display = "";  
             }
         }
     }
 
-    // Set a timer to reset the table after 2 minutes (120000 milliseconds)
+    // Definir um temporizador para resetar a tabela após 2 minutos (120000 milissegundos)
     setTimeout(resetTable, 120000);
 }
 
@@ -33,6 +39,6 @@ function resetTable() {
     tr = table.getElementsByTagName("tr");
 
     for (i = 0; i < tr.length; i++) {
-        tr[i].style.display = "";  // Show all rows
+        tr[i].style.display = "";  // Mostrar todas as linhas
     }
 }
