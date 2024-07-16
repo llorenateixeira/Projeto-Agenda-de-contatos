@@ -81,7 +81,7 @@ def update_html(file_path):
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <form class="d-flex" role="search" onsubmit="return false;">
-                        <input id="tableSearchInput" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <input id="tableSearchInput" class="form-control me-2" type="search" placeholder="Buscar por nome" aria-label="Search">
                         <button type="button" class="btn btn-danger" onclick="searchTable()">Buscar</button>
                     </form>
                 </div>
