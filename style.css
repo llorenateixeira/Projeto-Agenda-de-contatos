@@ -4,7 +4,9 @@ body {
     padding: 0;
     font-family: "Segoe UI", Arial, sans-serif;
 }
-
+.btn{
+    background: black
+}
 table {
     font-family: "Segoe UI", Arial, sans-serif;
     border-collapse: collapse;
