@@ -6,7 +6,7 @@ import os
 
 class Watcher:
     DIRECTORY_TO_WATCH = r"C://Users//Lorena.CSFDIGITAL//Documents//Teste"
-    FILE_TO_WATCH = "2024_Informacoes_csf_centralizadas.v01.xlsx"
+    FILE_TO_WATCH = "2024_Informacoes_centralizadas.v01.xlsx"
 
     def __init__(self):
         self.observer = Observer()
